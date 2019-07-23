@@ -6,7 +6,7 @@ react Starter project using typescript and Parcel
 
 - [node v9.4.0 or higher](http://nodejs.org/)
 
-## Development and Test Environment
+## Development
 
 Development requires installation of Javascript library modules using the [Node Package manager](https://www.npmjs.com/).
 
