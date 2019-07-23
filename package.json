@@ -1,0 +1,61 @@
+{
+  "alias": {
+    "api": "./source/ts/api",
+    "consts": "./source/ts/definitions/consts",
+    "contexts": "./source/ts/contexts",
+    "interfaces": "./source/ts/definitions/interfaces",
+    "layouts": "./source/ts/react-components/layouts",
+    "utilities": "./source/ts/utilities",
+    "static": "./source/static"
+  },
+  "contributors": [
+    "Ahmed Serag <ahmode2003@gmial.com>"
+  ],
+  "description": "React starter.",
+  "dependencies": {
+    "@types/node": "^12.0.8",
+    "@types/react": "^16.8.19",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-router-dom": "^4.3.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "^7.0.0",
+    "husky": "^2.7.0",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2",
+    "tslint": "^5.18.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.1"
+  },
+  "directories": {
+    "test": "./test"
+  },
+  "engines": {
+    "node": ">= 9.4.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettify"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "parcel build ./source/static/html/index.html",
+    "prettify": "prettier --write ./source/**/*.{ts,tsx}",
+    "start": "parcel ./source/static/html/index.html"
+  },
+  "version": "2019.07.16"
+}

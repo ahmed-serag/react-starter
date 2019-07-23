@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "lib": ["dom", "esnext"],
+    "module": "esNext",
+    "moduleResolution": "node",
+    "target": "es2015",
+    "baseUrl": ".",
+    "paths": {
+      "api/*": ["ts/api/*"],
+      "consts/*": ["ts/definitions/consts/*"],
+      "contexts/*": ["ts/contexts/*"],
+      "interfaces/*": ["ts/definitions/interfaces/*"],
+      "layouts/*": ["ts/react-components/layouts/*"],
+      "utilities/*": ["ts/utilities/*"],
+      "static/*": ["ts/static/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
