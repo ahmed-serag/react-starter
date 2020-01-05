@@ -13,7 +13,6 @@ import { Common } from "utilities/common";
  * @class network
  */
 export class Network {
-
   /**
    * execute a post request to a a given url with given options
    *

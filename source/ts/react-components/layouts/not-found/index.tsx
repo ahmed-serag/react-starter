@@ -14,10 +14,7 @@ import React from "react";
  * @extends {React.Component}
  */
 export class NotFound extends React.Component {
-
   render(): React.ReactNode {
-    return(
-      <h2>Url Not Found</h2>
-    );
+    return <h2>Url Not Found</h2>;
   }
 }

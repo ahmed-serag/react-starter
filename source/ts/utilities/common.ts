@@ -12,7 +12,6 @@
  * @class Common
  */
 export class Common {
-  
   /**
    * check if this value not null and not undefined.
    *
