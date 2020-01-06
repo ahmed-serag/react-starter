@@ -11,7 +11,7 @@ import { USER_ROUTES } from "./user";
 /**
  * set of routes available in the app.
  */
-export const ROUTES: {[index: string]: Route} = {
+export const ROUTES: { [index: string]: Route } = {
   ...STATIC_ROUTES,
   ...USER_ROUTES
 };

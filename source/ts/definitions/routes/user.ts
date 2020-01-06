@@ -9,6 +9,4 @@ import { Route } from "interfaces/route";
 /**
  * set of user related routes in the app.
  */
-export const USER_ROUTES: {[index: string]: Route} = {
-    
-};
+export const USER_ROUTES: { [index: string]: Route } = {};

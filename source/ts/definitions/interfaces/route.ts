@@ -10,7 +10,7 @@
  */
 export interface Route {
   /**
-   * React component that should be rendered when 
+   * React component that should be rendered when
    * the route is matched.
    *
    * @type {React.ComponentClass}
@@ -25,7 +25,7 @@ export interface Route {
    */
   path: string;
   /**
-   * a boolean which is true if the path should 
+   * a boolean which is true if the path should
    * be exact the same to match the route.
    *
    * @type {boolean}

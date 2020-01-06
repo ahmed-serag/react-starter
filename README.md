@@ -41,6 +41,17 @@ npm run-script start
 | _start_            | Starts the Webpack server.                                                  |
 
 
+## Folder Structure
+
+| Folder             | Description                                                                 |
+| ------------------ | --------------------------------------------------------------------------- |
+| _api_              | API and network related Classes that handle any network requests.           |
+| _contexts_         | Implementation of React contexts used in the App.                           |
+| _definitions_      | declaration of interfaces, routes and constants.                            |
+| _react-components_ | Implementation of react Components that renders different pages in the App. |
+| _utilities_        | Implementation of Modules related utilities used across the App.            |
+
+
 ## Code quality conventions
 - file headers needs to be added with file/author related details
 - file names should follow kebab-case

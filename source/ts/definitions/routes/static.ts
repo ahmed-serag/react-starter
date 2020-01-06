@@ -10,10 +10,10 @@ import { Home } from "layouts/home";
 /**
  * set of static routes in the app.
  */
-export const STATIC_ROUTES: {[index: string]: Route} = {
+export const STATIC_ROUTES: { [index: string]: Route } = {
   home: {
     path: "/",
     component: Home,
-    exact: true,
+    exact: true
   }
 };
