@@ -9,12 +9,14 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, RouteProps } from "react-router-dom";
 import { ROUTES } from "./definitions/consts/routes";
+import { NotFound } from "layouts/not-found";
 
 /**
  * state of application component.
  *
  * @interface AppState
  */
+// tslint:disable-next-line: no-empty-interface
 interface AppState {
   // State of App Component.
 }
@@ -38,10 +40,12 @@ class App extends React.Component<{}, AppState> {
     return (
       <BrowserRouter>
         <Switch>
-          {Object.keys(ROUTES).map(route => {
+          {Object.keys(ROUTES).map((route, index) => {
+            // tslint:disable-next-line: variable-name
             const Component = ROUTES[route].component;
             return (
               <Route
+                key={index}
                 path={ROUTES[route].path}
                 exact={ROUTES[route].exact}
                 render={(renderProps: RouteProps) => {
@@ -52,6 +56,12 @@ class App extends React.Component<{}, AppState> {
               />
             );
           })}
+          <Route
+            key={"not-found"}
+            render={() => {
+              return <NotFound />;
+            }}
+          />
         </Switch>
       </BrowserRouter>
     );
