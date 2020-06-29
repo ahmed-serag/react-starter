@@ -20,19 +20,20 @@ export class Common {
    * @returns {boolean} true if values exists.
    * @memberof Common
    */
-  public static exist(value: any, keys: string[] = undefined): boolean {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  public static exist(value: unknown, keys: string[] = undefined): boolean {
     // first missing key if found
     let missingKey: string;
-    let exist: boolean = true;
+    let exist = true;
 
     if (value === undefined || value === null) {
       exist = false;
     }
 
     if (exist && keys !== undefined && keys !== null) {
-      missingKey = keys.find((key: string) => {
-        return value[key] === null || value[key] === undefined;
-      });
+      missingKey = keys.find(
+        (key: string) => value[key] === null || value[key] === undefined
+      );
     }
 
     return exist && !missingKey;

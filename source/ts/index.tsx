@@ -8,15 +8,15 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, RouteProps } from "react-router-dom";
-import { ROUTES } from "./definitions/consts/routes";
 import { NotFound } from "layouts/not-found";
+import { ROUTES } from "./definitions/consts/routes";
 
 /**
  * state of application component.
  *
  * @interface AppState
  */
-// tslint:disable-next-line: no-empty-interface
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface AppState {
   // State of App Component.
 }
@@ -27,12 +27,14 @@ interface AppState {
  * @class App
  * @extends {React.Component<{}, AppState>}
  */
-class App extends React.Component<{}, AppState> {
-  constructor(props: {}) {
+class App extends React.Component<unknown, AppState> {
+  constructor(props: unknown) {
     super(props);
 
+    // eslint-disable-next-line object-curly-newline
     this.state = {
       // Add App State Here if any.
+      // eslint-disable-next-line object-curly-newline
     };
   }
 
@@ -48,20 +50,13 @@ class App extends React.Component<{}, AppState> {
                 key={index}
                 path={ROUTES[route].path}
                 exact={ROUTES[route].exact}
-                render={(renderProps: RouteProps) => {
-                  return (
-                    <Component {...renderProps} {...ROUTES[route].props} />
-                  );
-                }}
+                render={(renderProps: RouteProps) => (
+                  <Component {...renderProps} {...ROUTES[route].props} />
+                )}
               />
             );
           })}
-          <Route
-            key={"not-found"}
-            render={() => {
-              return <NotFound />;
-            }}
-          />
+          <Route key="not-found" render={() => <NotFound />} />
         </Switch>
       </BrowserRouter>
     );

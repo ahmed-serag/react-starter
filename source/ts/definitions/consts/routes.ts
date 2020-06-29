@@ -15,17 +15,16 @@ export const ROUTES = {
 
   Home: {
     component: Home,
+    // eslint-disable-next-line object-curly-newline
     props: {
       // Add Special Props to the component if needed
+      // eslint-disable-next-line object-curly-newline
     },
     path: "/",
     exact: true
   },
   NotFound: {
     component: NotFound,
-    props: {
-      // Add Special Props to the component if needed
-    },
     exact: false
   }
 };

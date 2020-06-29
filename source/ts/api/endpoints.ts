@@ -8,6 +8,8 @@
 /**
  * set of endpoints in the API.
  */
+// eslint-disable-next-line object-curly-newline
 export const ENDPOINTS = {
   // ADD Routes Here!
+  // eslint-disable-next-line object-curly-newline
 };

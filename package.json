@@ -26,14 +26,24 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
+    "@commitlint/config-conventional": "^9.0.1",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "acorn": "^7.3.1",
+    "commitlint": "^9.0.1",
+    "eslint": "^7.3.1",
+    "eslint-config-airbnb-typescript": "^8.0.2",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.1",
+    "eslint-plugin-react-hooks": "^4.0.4",
     "husky": "^2.7.0",
+    "lint-staged": "^10.2.11",
     "parcel-bundler": "^1.12.4",
-    "prettier": "^1.18.2",
-    "tslint": "^5.18.0",
-    "tslint-config-airbnb": "^5.11.1",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-react": "^4.0.0",
-    "typescript": "^3.5.1"
+    "prettier": "^1.19.1",
+    "typescript": "^3.9.5"
   },
   "directories": {
     "test": "./test"
@@ -43,8 +53,15 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettify"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run-script lint"
     }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md,ts,tsx}": [
+      "prettier --write"
+    ]
   },
   "repository": {
     "type": "git",
@@ -55,7 +72,8 @@
   "scripts": {
     "build": "parcel build ./source/static/html/index.html",
     "prettify": "prettier --write ./source/**/*.{ts,tsx}",
-    "start": "parcel ./source/static/html/index.html"
+    "start": "parcel ./source/static/html/index.html",
+    "lint": "eslint --fix source/ts/**"
   },
   "version": "2019.07.16"
 }

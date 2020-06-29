@@ -19,17 +19,17 @@ export class Network {
    * @static
    * @param {string} url url of the request.
    * @param {RequestInit} init set of options sent with the url.
-   * @returns {Promise<any>} promise to return the Json response of the request.
+   * @returns {Promise<unknown>} promise to return the Json response of the request.
    * @memberof Network
    */
-  public static post(url: string, init: RequestInit): Promise<any> {
+  public static post(url: string, init: RequestInit): Promise<unknown> {
     return fetch(url, {
       method: "POST",
       mode: "cors",
       headers: Network.getHeaders(),
       ...init
     }).then((response: Response) => {
-      let promise: Promise<any>;
+      let promise: Promise<unknown>;
 
       if (response.status !== 200) {
         promise = Network.handleErrorsBasedOnStatus(response);
@@ -49,14 +49,14 @@ export class Network {
    * @returns {Promise<any>} promise to return the Json response of the request.
    * @memberof Network
    */
-  public static get(url: string, init: RequestInit): Promise<any> {
+  public static get(url: string, init: RequestInit): Promise<unknown> {
     return fetch(url, {
       method: "GET",
       mode: "cors",
       headers: Network.getHeaders(),
       ...init
     }).then((response: Response) => {
-      let promise: Promise<any>;
+      let promise: Promise<unknown>;
 
       if (response.status !== 200) {
         promise = Network.handleErrorsBasedOnStatus(response);
@@ -71,7 +71,8 @@ export class Network {
    * get headers that should be added to the request.
    *
    * @static
-   * @param {HeadersInit} [originalHeaders] optional headers to be added/overwrite the default headers.
+   * @param {HeadersInit} [originalHeaders] optional headers to be
+   * added/overwrite the default headers.
    * @returns {HeadersInit} headers object that needs to be added to the request.
    * @memberof Network
    */
@@ -99,8 +100,10 @@ export class Network {
    * @returns {Promise<any>} promise to return an error with a specific message
    * @memberof Network
    */
-  public static handleErrorsBasedOnStatus(response: Response): Promise<any> {
-    let promise: Promise<any>;
+  public static handleErrorsBasedOnStatus(
+    response: Response
+  ): Promise<unknown> {
+    let promise: Promise<unknown>;
 
     switch (response.status) {
       case 400:
