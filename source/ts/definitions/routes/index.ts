@@ -13,5 +13,5 @@ import { USER_ROUTES } from "./user";
  */
 export const ROUTES: { [index: string]: Route } = {
   ...STATIC_ROUTES,
-  ...USER_ROUTES
+  ...USER_ROUTES,
 };

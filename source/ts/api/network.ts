@@ -27,7 +27,7 @@ export class Network {
       method: "POST",
       mode: "cors",
       headers: Network.getHeaders(),
-      ...init
+      ...init,
     }).then((response: Response) => {
       let promise: Promise<unknown>;
 
@@ -54,7 +54,7 @@ export class Network {
       method: "GET",
       mode: "cors",
       headers: Network.getHeaders(),
-      ...init
+      ...init,
     }).then((response: Response) => {
       let promise: Promise<unknown>;
 
@@ -79,14 +79,14 @@ export class Network {
   public static getHeaders(originalHeaders?: HeadersInit): HeadersInit {
     let headers: HeadersInit = {
       "content-type": "application/json",
-      accept: "application/json"
+      accept: "application/json",
     };
 
     // Add External Headers if needed here
 
     headers = {
       ...headers,
-      ...originalHeaders
+      ...originalHeaders,
     };
 
     return headers;
@@ -101,7 +101,7 @@ export class Network {
    * @memberof Network
    */
   public static handleErrorsBasedOnStatus(
-    response: Response
+    response: Response,
   ): Promise<unknown> {
     let promise: Promise<unknown>;
 

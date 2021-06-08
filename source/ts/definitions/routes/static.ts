@@ -14,6 +14,6 @@ export const STATIC_ROUTES: { [index: string]: Route } = {
   home: {
     path: "/",
     component: Home,
-    exact: true
-  }
+    exact: true,
+  },
 };

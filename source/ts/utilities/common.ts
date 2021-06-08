@@ -32,7 +32,7 @@ export class Common {
 
     if (exist && keys !== undefined && keys !== null) {
       missingKey = keys.find(
-        (key: string) => value[key] === null || value[key] === undefined
+        (key: string) => value[key] === null || value[key] === undefined,
       );
     }
 

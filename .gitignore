@@ -67,3 +67,4 @@ id_rsa
 
 ## parcel files
 .cache
+.parcel-cache

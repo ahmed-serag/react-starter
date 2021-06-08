@@ -21,10 +21,10 @@ export const ROUTES = {
       // eslint-disable-next-line object-curly-newline
     },
     path: "/",
-    exact: true
+    exact: true,
   },
   NotFound: {
     component: NotFound,
-    exact: false
-  }
+    exact: false,
+  },
 };

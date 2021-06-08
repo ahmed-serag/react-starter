@@ -12,56 +12,32 @@
     "Ahmed Serag <ahmode2003@gmial.com>"
   ],
   "description": "React starter.",
-  "dependencies": {
-    "@types/node": "^12.0.8",
-    "@types/react": "^16.8.19",
-    "@types/react-dom": "^16.8.4",
-    "@types/react-router-dom": "^4.3.4",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1"
-  },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.5.4",
-    "@babel/preset-react": "^7.0.0",
-    "@commitlint/config-conventional": "^9.0.1",
-    "@typescript-eslint/eslint-plugin": "^3.4.0",
-    "@typescript-eslint/parser": "^3.4.0",
-    "acorn": "^7.3.1",
-    "commitlint": "^9.0.1",
-    "eslint": "^7.3.1",
-    "eslint-config-airbnb-typescript": "^8.0.2",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.1",
-    "eslint-plugin-react-hooks": "^4.0.4",
-    "husky": "^2.7.0",
-    "lint-staged": "^10.2.11",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^1.19.1",
-    "typescript": "^3.9.5"
+    "@babel/preset-env": "^7.14.4",
+    "@types/node": "^15.12.2",
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "parcel": "^2.0.0-beta.3.1",
+    "prettier": "^2.3.1",
+    "typescript": "^4.3.2"
   },
   "directories": {
     "test": "./test"
   },
   "engines": {
     "node": ">= 9.4.0"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run-script lint"
-    }
-  },
-  "lint-staged": {
-    "*.{js,css,json,md,ts,tsx}": [
-      "prettier --write"
-    ]
   },
   "repository": {
     "type": "git",
@@ -70,10 +46,15 @@
   "keywords": [],
   "license": "UNLICENSED",
   "scripts": {
-    "build": "parcel build ./source/static/html/index.html",
     "prettify": "prettier --write ./source/**/*.{ts,tsx}",
-    "start": "parcel ./source/static/html/index.html",
-    "lint": "eslint --fix source/ts/**"
+    "lint": "eslint --fix source/ts/**",
+    "start": "parcel serve ./source/static/html/index.html",
+    "build": "parcel build ./source/static/html/index.html"
   },
-  "version": "2019.07.16"
+  "version": "2019.07.16",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0"
+  }
 }

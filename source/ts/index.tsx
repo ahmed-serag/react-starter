@@ -31,11 +31,7 @@ class App extends React.Component<unknown, AppState> {
   constructor(props: unknown) {
     super(props);
 
-    // eslint-disable-next-line object-curly-newline
-    this.state = {
-      // Add App State Here if any.
-      // eslint-disable-next-line object-curly-newline
-    };
+    this.state = {};
   }
 
   render(): React.ReactNode {
